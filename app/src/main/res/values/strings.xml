@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PsyApps</string>
+    <string name="psyapps">PsyApps</string>
+    <string name="name">Masukkan Nama Anda</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="title_register">Silahkan Daftar Terlebih Dahulu</string>
+</resources>
