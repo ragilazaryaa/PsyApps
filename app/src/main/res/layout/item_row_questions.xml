@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="190dp"
+    android:layout_marginEnd="10dp">
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="184dp"
+        tools:layout_editor_absoluteX="1dp"
+        android:layout_gravity="bottom"
+        android:paddingHorizontal="12dp"
+        android:background="@drawable/rounded_background"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center|top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_here"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_marginTop="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|center_horizontal"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/text_here"
+            android:textSize="12sp"
+            tools:ignore="SmallSp" />
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_like"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:text="128" />
+
+            <TextView
+                android:id="@+id/tv_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawableStart="@drawable/ic_comment"
+                android:text="32"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/profile_img"/>
+
+</FrameLayout>

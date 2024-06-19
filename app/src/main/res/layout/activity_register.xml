@@ -2,31 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_logout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sign"
-    tools:context=".Register.RegisterActivity">
-
-  <ImageView
-      android:id="@+id/imageView"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:layout_marginStart="32dp"
-      android:layout_marginEnd="32dp"
-      app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="@+id/guideline2"
-      app:srcCompat="@drawable/psyapps" />
+    tools:context=".main.WelcomeActivity"
+    android:background="@drawable/login"
+    >
 
   <TextView
       android:id="@+id/tv_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
-      android:fontFamily="@font/inter_semibold"
+      android:fontFamily="@font/poppins_medium"
       android:text="@string/psyapps"
       android:textSize="24sp"
+      android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
@@ -47,9 +38,10 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="140dp"
-      android:fontFamily="@font/inter_semibold"
-      android:text="@string/create_an_account"
+      android:fontFamily="@font/poppins_medium"
+      android:text="Please Register first"
       android:textSize="18sp"
+      android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -59,72 +51,164 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="4dp"
-      android:fontFamily="@font/inter"
-      android:text="Enter your email to sign up for this app"
+      android:fontFamily="@font/poppins_medium"
+      android:text="Get Started"
       android:textSize="18sp"
+      android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/tv_create" />
 
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/et_email"
-      android:layout_width="327dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tv_enter_email">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_email"
+  <TextView
+      android:id="@+id/tv_username"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="48dp"
+      android:alpha="0"
+      android:fontFamily="@font/poppins_medium"
+      android:text="Username"
+      android:textColor="@color/black"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_create"
+      tools:alpha="100" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/etl_username"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="40dp"
+      android:layout_marginEnd="32dp"
+      android:alpha="0"
+      android:background="@drawable/shape_edit"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_enter_email"
+      app:startIconDrawable="@drawable/ic_person"
+      tools:alpha="1">
+
+    <com.example.storyapps.customview.EditText
+        android:id="@+id/et_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="email@domain.com" />
+        android:layout_height="48dp"
+        android:background="@drawable/shape_edit"
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="16dp"
+        tools:ignore="SpeakableTextPresentCheck" />
   </com.google.android.material.textfield.TextInputLayout>
 
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/et_password"
-      android:layout_width="327dp"
+  <TextView
+      android:id="@+id/emailTextView"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
-      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="24dp"
+      android:alpha="0"
+      android:fontFamily="@font/poppins_medium"
+      android:text="@string/email"
+      android:textColor="@color/black"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/et_email">
+      app:layout_constraintTop_toBottomOf="@+id/etl_username"
+      tools:alpha="100" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_edit_text"
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/etl_email"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:alpha="0"
+      android:background="@drawable/shape_edit"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+      app:startIconDrawable="@drawable/ic_email"
+      tools:alpha="1">
+
+    <com.example.storyapps.customview.EditText
+        android:id="@+id/et_email_register"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password" />
+        android:layout_height="48dp"
+        android:background="@drawable/shape_edit"
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:inputType="textEmailAddress"
+        tools:ignore="SpeakableTextPresentCheck" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/tv_pw"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="12dp"
+      android:alpha="0"
+      android:fontFamily="@font/poppins_medium"
+      android:text="@string/password"
+      android:textColor="@color/black"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etl_email"
+      tools:alpha="100" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/etl_pw"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
+      android:alpha="0"
+      android:background="@drawable/shape_edit"
+      app:endIconMode="password_toggle"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_pw"
+      app:startIconDrawable="@drawable/ic_password"
+      tools:alpha="1">
+
+    <com.example.storyapps.customview.EditText
+        android:id="@+id/et_pw_register"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_edit"
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:inputType="textPassword"
+        tools:ignore="SpeakableTextPresentCheck" />
   </com.google.android.material.textfield.TextInputLayout>
 
   <Button
-      android:id="@+id/signupButton"
+
+      android:id="@+id/btn_register"
       android:layout_width="0dp"
       android:layout_height="64dp"
       android:layout_marginStart="32dp"
-      android:layout_marginTop="24dp"
+      android:layout_marginTop="78dp"
       android:layout_marginEnd="32dp"
-      android:backgroundTint="@color/black"
-      android:text="@string/create_an_account"
+      android:backgroundTint="@color/ungu"
+      android:fontFamily="@font/poppins_medium"
+      android:text="Register"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/et_password" />
+      app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
 
-  <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guidelineHorizontal"
+  <ProgressBar
+      android:id="@+id/pb_register"
+      style="?android:attr/progressBarStyle"
       android:layout_width="wrap_content"
-      android:layout_height="64dp"
-      android:orientation="horizontal"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintGuide_percent="0.30191082"
-      app:layout_constraintStart_toStartOf="parent" />
-
-  <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/guideline2"
-      android:layout_width="wrap_content"
-      android:layout_height="64dp"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_percent="0.1" />
-
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:visibility="gone"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
