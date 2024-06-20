@@ -1,14 +1,14 @@
 package com.example.psyapps.home
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.psyapps.Question.Question
 import com.example.psyapps.R
 import com.example.psyapps.databinding.ActivityViewAllQuestionBinding
 import com.example.psyapps.home.adapter.RvQuestionAdapter
+import com.example.psyapps.home.questions.Question
 
 class ViewAllQuestion : AppCompatActivity() {
     private lateinit var binding : ActivityViewAllQuestionBinding
@@ -21,15 +21,21 @@ class ViewAllQuestion : AppCompatActivity() {
         binding = ActivityViewAllQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        rvAllQuestions = binding.rvAllQuestions
+        rvAllQuestions = binding.rvAllQuestion
         rvAllQuestions.setHasFixedSize(true)
 
         questionList.addAll(getAllListQuestion())
         showRecyclerList()
+
+        binding.ivBackPopular.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun showRecyclerList() {
-        rvAllQuestions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rvAllQuestions.layoutManager = GridLayoutManager(this , 2)
         val listDestinationAdapter = RvQuestionAdapter(questionList)
         rvAllQuestions.adapter = listDestinationAdapter
     }
@@ -44,5 +50,11 @@ class ViewAllQuestion : AppCompatActivity() {
             listQuestion.add(question)
         }
         return listQuestion
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

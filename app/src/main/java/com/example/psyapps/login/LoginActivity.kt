@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.psyapps.data.UserModel
 import com.example.psyapps.databinding.ActivityLoginBinding
 import com.example.psyapps.home.HomeActivity
+import com.example.psyapps.main.WelcomeActivity
 import com.example.psyapps.preferences.SharedPreferences
 import com.example.psyapps.register.RegisterActivity
 
@@ -134,5 +135,11 @@ class LoginActivity : AppCompatActivity() {
         } else {
             binding.pbProgressBar.visibility = View.GONE
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

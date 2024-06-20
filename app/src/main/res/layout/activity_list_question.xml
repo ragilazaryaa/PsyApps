@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context=".home.ProfileActivity">
+    tools:context=".home.questions.ListQuestion">
 
     <FrameLayout
         android:id="@+id/frame_profile"
-        android:layout_width="389dp"
-        android:layout_height="69dp"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iv_back_profile"
+            android:id="@+id/iv_back_question"
             android:layout_width="39dp"
             android:layout_height="37dp"
             android:layout_gravity="start|center_vertical"
@@ -26,26 +26,26 @@
 
         <TextView
             android:id="@+id/tv_titleProfile"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:paddingHorizontal="144dp"
-            android:paddingTop="8dp"
-            android:text="Profile"
+            android:text="My Question"
             android:textSize="28sp"
             android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="97dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="4dp"
-            android:backgroundTint="@color/ungu"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Logout"
-            android:textSize="12sp" />
     </FrameLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_question"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/frame_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        tools:listitem="@layout/item_row_all_question" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@ interface ApiService {
 
     @POST("login/patient")
     fun login(
-        @Body BodyLogin:UserModel
+        @Body bodyLogin:UserModel
     ) : Call<LoginResponse>
 
 }

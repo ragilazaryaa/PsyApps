@@ -1,5 +1,3 @@
-import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -56,28 +54,25 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Glide
-    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
     //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+    implementation ("com.squareup.retrofit2:retrofit:2.10.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.10.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
     //Lifecycle
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
 
     //Coroutine
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     //CircleImageView
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    //Compose
-    implementation ("androidx.compose.ui:ui:1.0.0")
-    implementation ("androidx.compose.material3:material3:1.0.0")
-    implementation ("androidx.activity:activity-compose:1.3.0")
+    //compose
+    implementation("androidx.compose.ui:ui:1.6.8")
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.activity:activity-compose:1.9.0")
 
-    implementation ("androidx.core:core-ktx:1.8.0") // Update ke versi terbaru
-    implementation ("androidx.appcompat:appcompat:1.4.2") // Update ke versi terbaru
-    implementation ("androidx.fragment:fragment-ktx:1.4.1") // Update ke versi terbar
 }

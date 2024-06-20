@@ -11,13 +11,13 @@
         android:id="@+id/frame_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iv_bar"
+            android:id="@+id/iv_back_popular"
             android:layout_width="39dp"
             android:layout_height="37dp"
             android:layout_gravity="start|center_vertical"
@@ -31,21 +31,23 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:text="@string/title_question"
+            android:text="Popular Question"
             android:textSize="28sp"
             android:textStyle="bold" />
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_all_questions"
-        android:layout_width="413dp"
-        android:layout_height="672dp"
-        android:layout_marginTop="1dp"
+        android:id="@+id/rv_All_question"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frame_profile"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/frame_profile"
+        tools:listitem="@layout/item_row_all_question" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

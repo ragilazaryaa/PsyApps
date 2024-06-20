@@ -13,8 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PsyApps"
-        tools:targetApi="33"
-        >
+        tools:targetApi="34" >
+        <activity
+            android:name=".home.questions.ListQuestion"
+            android:exported="false"
+            android:theme="@style/Theme.PsyApps" />
+        <activity
+            android:name=".home.favorite.ListFavorite"
+            android:exported="false" />
         <activity
             android:name=".home.ViewAllQuestion"
             android:exported="false"
@@ -42,9 +48,10 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

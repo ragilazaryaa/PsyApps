@@ -18,22 +18,86 @@
 
     <!--    Questions List-->
     <string-array name="data_names">
-        <item>dr.Tirta</item>
-        <item>dr.Boyke</item>
-        <item>dr.Ragil</item>
-        <item>dr.Ajik</item>
-        <item>dr.Opan</item>
+        <item>Dr.Tirta</item>
+        <item>Dr.Boyke</item>
+        <item>Dr.Ragil</item>
+        <item>Dr.Ajik</item>
+        <item>Dr.Opan</item>
+        <item>Dr.Hulk</item>
+        <item>Dr.Spider</item>
+        <item>Dr.Thor</item>
+        <item>Dr.Capt</item>
+        <item>Dr.Astra</item>
+        <item>Dr.Chamber</item>
+        <item>Dr.Viper</item>
+        <item>Dr.Omen</item>
+        <item>Dr.Raze</item>
+        <item>Dr.Jett</item>
+    </string-array>
+
+    <string-array name="data_favorites">
+        <item>Dr.Astra</item>
+        <item>Dr.Chamber</item>
+        <item>Dr.Viper</item>
+        <item>Dr.Omen</item>
+        <item>Dr.Raze</item>
+        <item>Dr.Jett</item>
+    </string-array>
+    <string-array name="data_favorite_question">
+        <item>Have you lost interest or pleasure in activities that you usually enjoy?</item>
+        <item>How are your relationships with family and friends? Have there been any changes in your social interactions?</item>
+        <item>Have you ever had thoughts of harming yourself or felt that life is not worth living?</item>
+        <item>How do you handle situations that make you angry or frustrated?</item>
+        <item>Do you feel confident about yourself and your abilities? Has there been any change in your self-esteem?</item>
+        <item>Have you lost interest or pleasure in activities that you usually enjoy?</item>
+    </string-array>
+
+    <!-- Ini List My Question -->
+    <string-array name="data_name_my_question">
+        <item>Ragil Azarya</item>
+        <item>Ragil Azarya</item>
+        <item>Ragil Azarya</item>
+        <item>Ragil Azarya</item>
+        <item>Ragil Azarya</item>
+    </string-array>
+
+    <string-array name="data_my_questions">
+        <item>Have you lost interest or pleasure in activities that you usually enjoy?</item>
+        <item>How are your relationships with family and friends? Have there been any changes in your social interactions?</item>
+        <item>Have you ever had thoughts of harming yourself or felt that life is not worth living?</item>
+        <item>How do you handle situations that make you angry or frustrated?</item>
+        <item>Do you feel confident about yourself and your abilities? Has there been any change in your self-esteem?</item>
     </string-array>
 
     <string-array name="data_questions">
-        <item>What are the main differences between classical conditioning and operant conditioning in behavioral psychology?</item>
+        <item><item>How do you handle situations that make you angry or frustrated?</item></item>
+        <item><item>How do you handle situations that make you angry or frustrated?</item></item>
+        <item><item>How do you handle situations that make you angry or frustrated?</item></item>
         <item>How does the bystander effect influence people\'s likelihood to help in emergency situations?</item>
-        <item>What are the main differences between classical conditioning and operant conditioning in behavioral psychology?</item>
-        <item>How does the bystander effect influence people\'s likelihood to help in emergency situations?</item>
-        <item>What are the main differences between classical conditioning and operant conditioning in behavioral psychology?</item>
+        <item><item>How do you handle situations that make you angry or frustrated?</item></item>
+        <item>How have you been feeling overall in the past week?</item>
+        <item>How have you been feeling overall in the past week?</item>
+        <item>Are you experiencing any sleep difficulties, such as insomnia or frequent waking up at night?</item>
+        <item>How is your energy level throughout the day? Do you often feel tired or lethargic?</item>
+        <item>Do you find it hard to focus or concentrate on daily tasks?</item>
+        <item>Have you lost interest or pleasure in activities that you usually enjoy?</item>
+        <item>How have you been feeling overall in the past week?</item>
+        <item>Have you ever had thoughts of harming yourself or felt that life is not worth living?</item>
+        <item>How do you handle situations that make you angry or frustrated?</item>
+        <item>Do you feel confident about yourself and your abilities? Has there been any change in your self-esteem?</item>
     </string-array>
 
     <integer-array name="data_img">
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
+        <item>@drawable/profile_img</item>
         <item>@drawable/profile_img</item>
         <item>@drawable/profile_img</item>
         <item>@drawable/profile_img</item>

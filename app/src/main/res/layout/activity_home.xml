@@ -71,7 +71,7 @@
                 tools:ignore="LabelFor" />
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/btn_ask"
                 android:layout_width="237dp"
                 android:layout_height="52dp"
                 android:layout_marginTop="4dp"
@@ -116,13 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_bar"
-            android:layout_width="49dp"
-            android:layout_height="45dp"
-            android:layout_gravity="start|center_vertical"
-            android:layout_marginStart="12dp"
-            app:srcCompat="@drawable/ic_bartap" />
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_user"
@@ -135,8 +129,16 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </FrameLayout>
 
+        <ImageView
+            android:id="@+id/iv_bar"
+            android:layout_width="55dp"
+            android:layout_height="51dp"
+            android:paddingTop="8dp"
+            app:srcCompat="@drawable/ic_bartap" />
+
+
+    </FrameLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_questions"
         android:layout_width="match_parent"
@@ -166,6 +168,7 @@
         android:textStyle="bold"
         android:id="@+id/tv_popular"
         android:layout_width="wrap_content"
+        android:paddingStart="8dp"
         android:layout_height="wrap_content"
         android:text="Popular Question"
         android:fontFamily="@font/poppins_medium"

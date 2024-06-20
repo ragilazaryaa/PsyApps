@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.psyapps.Question.Question
 import com.example.psyapps.R
+import com.example.psyapps.home.questions.Question
 
 class RvQuestionAdapter(private val listQuestion: ArrayList<Question>) : RecyclerView.Adapter<RvQuestionAdapter.ListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_questions, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_all_question, parent, false)
         return ListViewHolder(view)
     }
 

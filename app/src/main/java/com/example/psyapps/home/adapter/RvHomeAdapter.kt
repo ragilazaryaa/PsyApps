@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.psyapps.R
-import com.example.psyapps.Question.Question
+import com.example.psyapps.home.questions.Question
 
 class RvHomeAdapter(private val listQuestion: ArrayList<Question>) : RecyclerView.Adapter<RvHomeAdapter.ListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
